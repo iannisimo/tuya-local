@@ -1,0 +1,19 @@
+name: CasaSicura alarm
+products:
+  - id: vm1qnbnasgiirafc
+    name: Smart Security Gateway
+primary_entity:
+  entity: alarm_control_panel
+  dps:
+    - id: 101
+      type: string
+      name: alarm_state
+      mapping:
+        - dps_val: 2
+          value: disarmed
+        - dps_val: 1
+          value: armed_away
+        - dps_val: 3
+          value: armed_home
+        - dps_val: 4
+          value: triggered
